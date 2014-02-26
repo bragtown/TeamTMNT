@@ -12,11 +12,12 @@ describe('Controller: TeamctrlCtrl', function () {
   beforeEach(inject(function ($controller, $rootScope) {
     scope = $rootScope.$new();
     TeamctrlCtrl = $controller('TeamctrlCtrl', {
-      $scope: scope
+      $scope: scope,
+      team: 10
     });
   }));
 
-  it('should attach a list of awesomeThings to the scope', function () {
-    expect(scope.awesomeThings.length).toBe(3);
+  it('should attach a team to the scope', function () {
+    expect(scope.team).toBe(10);
   });
 });
